@@ -138,14 +138,6 @@
       <LastGenOutput>MyDatabase1.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\CrearAlquiler.aspx" />
-    <Content Include="Pages\Default.aspx" />
-    <Content Include="Pages\DetalleAlquiler.aspx" />
-    <Content Include="Pages\FormularioVideoJuego.aspx" />
-    <Content Include="Pages\GestionarAlquileres.aspx" />
-    <Content Include="Pages\GestionarVideoJuegos.aspx" />
-    <Content Include="Pages\Login.aspx" />
-    <Content Include="Pages\MisAlquileres.aspx" />
-    <Content Include="Pages\ModificarAlquiler.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -262,62 +254,6 @@
     </Compile>
     <Compile Include="Pages\CrearAlquiler.aspx.designer.cs">
       <DependentUpon>CrearAlquiler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\DetalleAlquiler.aspx.cs">
-      <DependentUpon>DetalleAlquiler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\DetalleAlquiler.aspx.designer.cs">
-      <DependentUpon>DetalleAlquiler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\FormularioVideoJuego.aspx.cs">
-      <DependentUpon>FormularioVideoJuego.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\FormularioVideoJuego.aspx.designer.cs">
-      <DependentUpon>FormularioVideoJuego.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\GestionarAlquileres.aspx.cs">
-      <DependentUpon>GestionarAlquileres.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\GestionarAlquileres.aspx.designer.cs">
-      <DependentUpon>GestionarAlquileres.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\GestionarVideoJuegos.aspx.cs">
-      <DependentUpon>GestionarVideoJuegos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\GestionarVideoJuegos.aspx.designer.cs">
-      <DependentUpon>GestionarVideoJuegos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MisAlquileres.aspx.cs">
-      <DependentUpon>MisAlquileres.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\MisAlquileres.aspx.designer.cs">
-      <DependentUpon>MisAlquileres.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ModificarAlquiler.aspx.cs">
-      <DependentUpon>ModificarAlquiler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\ModificarAlquiler.aspx.designer.cs">
-      <DependentUpon>ModificarAlquiler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
