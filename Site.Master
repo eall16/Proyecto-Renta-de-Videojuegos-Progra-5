@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Renta_de_Videojuegos.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Renta_de_Videojuegos</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Tema visual le puse el azul oscuro pero hay que escoger el color sobre qué sistema va a estar inspirado. -->
+    <style>
+        body { background-color: #1b2838; color: #c7d5e0; }
+        .navbar-brand { color: #66c0f4 !important; font-weight: bold; }
+        .nav-link { color: #c7d5e0 !important; }
+        .nav-link:hover { color: #66c0f4 !important; }
+        .body-content { background-color: #171a21; padding: 25px; border-radius: 6px; margin-top: 20px; }
+        a { color: #66c0f4; }
+        .mensaje-error { color: #ff6b6b; display: block; margin-bottom: 10px; }
+        table.tabla-datos, table.tabla-formulario, table.tabla-detalle { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+        table.tabla-datos th, table.tabla-datos td, table.tabla-detalle td { padding: 8px; border-bottom: 1px solid #2a475e; }
+        table.tabla-formulario td { padding: 6px; }
+        footer { color: #6b7c8f; }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/">Acá debería de ir el nombre y el logo</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item"><asp:HyperLink ID="lnkMisAlquileres" runat="server" CssClass="nav-link" NavigateUrl="~/Pages/MisAlquileres.aspx">Mis alquileres</asp:HyperLink></li>
+                        <li class="nav-item"><asp:HyperLink ID="lnkGestionarAlquileres" runat="server" CssClass="nav-link" NavigateUrl="~/Pages/GestionarAlquileres.aspx">Gestionar alquileres</asp:HyperLink></li>
+                        <li class="nav-item"><asp:HyperLink ID="lnkGestionarVideojuegos" runat="server" CssClass="nav-link" NavigateUrl="~/Pages/GestionarVideojuegos.aspx">Gestionar videojuegos</asp:HyperLink></li>
+                        <li class="nav-item"><asp:LinkButton ID="lnkCerrarSesion" runat="server" CssClass="nav-link" OnClientClick="return confirm('¿Desea cerrar sesión?');" OnClick="lnkCerrarSesion_Click">Cerrar sesión</asp:LinkButton></li>
+                    </ul>
+                    <span class="navbar-text"><asp:Label ID="lblNombreUsuario" runat="server" ForeColor="White" /></span>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content">
+            <h2><asp:Label ID="lblTituloSeccion" runat="server" /></h2>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>Sistema de Renta de Videojuegos (Le ponemos algun nombre)&mdash; Allan Varela y Emanuel López &mdash; @Universidad Castro Carazo</p>
+            </footer>
+        </div>
+    </form>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+</body>
+</html>
