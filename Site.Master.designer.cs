@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Renta_de_Videojuegos
+namespace RentaVideojuegos
 {
 
 
